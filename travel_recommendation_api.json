@@ -1,0 +1,72 @@
+{
+  "countries": [
+    {
+      "id": 1,
+      "name": "Japan",
+      "cities": [
+        {
+          "id": 1,
+          "name": "Tokyo",
+          "description": "A mix of neon skyscrapers and historic temples, offering unparalleled food and culture.",
+          "imageUrl": "images/tokyo.png", 
+          "timeZone": "Asia/Tokyo"
+        },
+        {
+          "id": 2,
+          "name": "Kyoto",
+          "description": "Known for its classical Buddhist temples, gardens, imperial palaces, and traditional wooden houses.",
+          "imageUrl": "images/kyoto.png",
+          "timeZone": "Asia/Tokyo"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Australia",
+      "cities": [
+        {
+          "id": 3,
+          "name": "Sydney",
+          "description": "Home to the iconic Opera House, stunning harbor, and world-class beaches like Bondi.",
+          "imageUrl": "images/sydney.png",
+          "timeZone": "Australia/Sydney"
+        },
+        {
+          "id": 4,
+          "name": "Melbourne",
+          "description": "Famous for its vibrant street art, hidden laneways, and fantastic coffee culture.",
+          "imageUrl": "images/melbourne.png",
+          "timeZone": "Australia/Melbourne"
+        }
+      ]
+    }
+  ],
+  "temples": [
+    {
+      "id": 5,
+      "name": "Angkor Wat",
+      "description": "The largest religious monument in the world, a stunning symbol of Cambodia.",
+      "imageUrl": "images/angkor_wat.png"
+    },
+    {
+      "id": 6,
+      "name": "Bagan Temples",
+      "description": "Thousands of ancient stupas and pagodas spread across a mystical plain in Myanmar.",
+      "imageUrl": "images/bagan.png"
+    }
+  ],
+  "beaches": [
+    {
+      "id": 7,
+      "name": "Whitehaven Beach",
+      "description": "Located in Australia, known for its pristine white silica sand and turquoise waters.",
+      "imageUrl": "images/whitehaven.png"
+    },
+    {
+      "id": 8,
+      "name": "Tulum Beach",
+      "description": "Stunning white-sand beach beneath the backdrop of ancient Mayan ruins in Mexico.",
+      "imageUrl": "images/tulum.png"
+    }
+  ]
+}

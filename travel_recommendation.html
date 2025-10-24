@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WanderLust Travel Recommendations</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* General Reset and Font */
+        body { margin: 0; font-family: 'Arial', sans-serif; }
+
+        /* Navbar Styling (from previous step, expanded slightly) */
+        nav { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 10px 20px; 
+            background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+            color: white;
+            position: fixed; /* Keep navbar visible on scroll */
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            padding: 0 15px; 
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff9900; /* Example hover color */
+        }
+        .search-container {
+            display: flex;
+            gap: 5px;
+        }
+        .search-container input, .search-container button {
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+        
+        /* Task 3: Home Page Styling */
+        #home-content {
+            /* IMPORTANT: Replace 'path/to/your-background-image.jpg' with your actual image file path */
+            background-image: url('path/to/your-background-image.jpg'); 
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 50px; /* Space for the fixed navbar */
+            color: white;
+            position: relative;
+        }
+
+        /* Overlay to make text readable */
+        #home-content::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* Dark semi-transparent overlay */
+            z-index: 1;
+        }
+
+        .hero-text {
+            z-index: 2; /* Ensure text is above the overlay */
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5em;
+            margin-bottom: 0.5em;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .hero-text p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        
+        /* Container for Recommendation Results */
+        #recommendation-results {
+            padding: 20px;
+            min-height: 300px; /* Ensure space for results */
+            text-align: center;
+            z-index: 5;
+            position: relative;
+            background-color: #f4f4f4;
+        }
+
+        /* Optional: Social Media Icons */
+        .social-icons {
+            margin-top: 20px;
+            z-index: 2;
+        }
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5em;
+        }
+
+        /* Result Display Styling */
+    #recommendation-results {
+        padding: 40px 20px; /* Increased padding */
+        min-height: 300px;
+        text-align: center;
+        background-color: #f4f4f4;
+    }
+    .recommendation-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 30px;
+    }
+    .result-card {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        overflow: hidden;
+        text-align: left;
+        transition: transform 0.3s;
+    }
+    .result-card:hover {
+        transform: translateY(-5px);
+    }
+    .result-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .card-content {
+        padding: 15px;
+    }
+    .card-content h3 {
+        color: #007bff;
+        margin-top: 0;
+    }
+    .card-content p {
+        color: #555;
+        font-size: 0.95em;
+    }
+    </style>
+    </head>
+<body>
+    <nav id="main-navbar">
+        <div class="logo">WanderLust</div>
+        <div class="nav-links">
+            <a href="travel_recommendation.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="keyword-input" placeholder="Search for beach, temple, country...">
+            <button id="search-btn">Search</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+    </nav>
+
+    <main id="home-content">
+        <div class="hero-text">
+            <h1>Your Journey Begins Here</h1>
+            <p>
+                Discover personalized travel recommendations for the world's most beautiful beaches, ancient temples, and vibrant countries. 
+                Enter a keyword above and let **WanderLust** plan your next unforgettable adventure!
+            </p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f">FB</i></a> 
+                <a href="#"><i class="fab fa-instagram">IG</i></a>
+                <a href="#"><i class="fab fa-twitter">TW</i></a>
+            </div>
+        </div>
+    </main>
+    
+    <section id="recommendation-results">
+        <h2>Your Recommendations Will Appear Here</h2>
+    </section>
+    
+
+    <script src="travel_recommendation.js"></script>
+
+    </body>
+</html>

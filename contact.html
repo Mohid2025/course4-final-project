@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Us | WanderLust Travel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Shared Styling (You would typically put this in an external style.css) */
+        body { margin: 0; font-family: 'Arial', sans-serif; background-color: #f4f4f4; }
+        
+        /* Simplified Navbar Styling */
+        nav { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 15px 30px; 
+            background-color: #007bff;
+            color: white; 
+        }
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            padding: 0 15px; 
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            gap: 10px;
+        }
+        
+        /* Content and Form Styling */
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        /* Form Layout */
+        .contact-form label {
+            display: block;
+            margin: 15px 0 5px 0;
+            font-weight: bold;
+            color: #333;
+        }
+        /* Task 5: Form Inputs */
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 97%; /* Allows for padding/border */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            box-sizing: border-box; /* Important for padding/width calculation */
+        }
+        .contact-form textarea {
+            resize: vertical; /* Allow user to resize vertically */
+            min-height: 150px;
+        }
+
+        /* Task 5: Submit Button */
+        .contact-form button {
+            background-color: #ff9900;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #cc7a00;
+        }
+    </style>
+</head>
+<body>
+    <nav id="about-contact-navbar">
+        <div class="logo">WanderLust</div>
+        <div class="nav-links">
+            <a href="travel_recommendation.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Reach Out to Us</h1>
+        <p style="text-align: center; color: #555;">
+            Have a question, feedback, or a suggestion? Use the form below to get in touch with the WanderLust team.
+        </p>
+
+        <form class="contact-form" action="#" method="POST">
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.contact-form');
+            
+            form.addEventListener('submit', function(event) {
+                // 1. Prevent the default form submission (stops page reload)
+                event.preventDefault(); 
+
+                // 2. Simple Client-Side Validation (Optional)
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                
+                if (name === "" || email === "") {
+                    alert("Please fill out your Name and Email.");
+                    return;
+                }
+                
+                // 3. Provide Success Feedback
+                // In a real project, AJAX (fetch) would send data here.
+                alert("Thank you for your message, " + name + "! We will be in touch soon.");
+                
+                // 4. Clear the form fields
+                form.reset();
+            });
+        });
+    </script>
+    
+</body>
+</html>
+</body>
+</html>
